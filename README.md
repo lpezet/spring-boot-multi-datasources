@@ -205,7 +205,7 @@ Hibernate:
 
 # Takeaways
 
-Main code and tests demonstrate how to **1)** define multiple data sources and use them in our DAOs, **2)** how to setup tests to handle multiple data sources and initialize them if need be for the tests.
+Main code and tests demonstrate how to **1)** define multiple data sources and use them in our DAOs, **2)** how to setup tests to handle multiple data sources and initialize those data sources, if need be, for the tests.
 
 1. Different data sources will need to setup a `@Bean` for each data source.
 2. If you're in the case where the models are within the same projects (vs. 1 project for each model/data source), make sure to have those in separate folders. Here we have `com.example.springboot.core.coreA` and `com.example.springboot.core.coreB` packages. This will be used when declaring data sources and specifying `packages` (see [CoreAConfig.java](src/main/java/com/example/springboot/config/CoreAConfig.java) and [CoreBConfig.java](src/main/java/com/example/springboot/config/CoreBConfig.java))
