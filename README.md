@@ -2,7 +2,7 @@
 
 This is **NOT** about **WETHER** this should be done, it's about **HOW** to do it, when you're facing that situation.
 
-In my book, the best approach is a micro-service implementation where each service gets to deal with its own (abd usually single) data source, or consuming other micro-services (abd each of those dealing with their own data source).
+In my book, the best approach is a micro-service implementation where each service gets to deal with its own (and usually single) data source, or consuming other micro-services (abd each of those dealing with their own data source).
 
 # Overview
 
