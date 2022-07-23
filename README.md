@@ -1,3 +1,9 @@
+# WARNING
+
+This is **NOT** about **WETHER** this should be done, it's about **HOW** to do it, when you're facing that situation.
+
+In my book, the best approach is a micro-service implementation where each service gets to deal with its own (abd usually single) data source, or consuming other micro-services (abd each of those dealing with their own data source).
+
 # Overview
 
 This project shows how to handle `multiple data sources` with `Spring Boot JPA`.
@@ -9,6 +15,13 @@ The `coreA` represents a data source where user information is stored. It holds 
 The `coreB` represents a data source where other kind of information is stored: address and the mapping between users (just id) and addresses. It holds the definition of BEs [Address](src/main/java/com/example/springboot/core/coreB/be/Address.java), [UserAddress](src/main/java/com/example/springboot/core/coreB/be/UserAddress.java), and their respective DAOs: [AddressRepository](src/main/java/com/example/springboot/core/coreB/dao/AddressRepository.java) and [UserAddressRepository](src/main/java/com/example/springboot/core/coreB/dao/UserAddressRepository.java).
 
 A service [MyService](src/main/java/com/example/springboot/service/MyService.java) is also provided to see how it bridges the 2 data sources into a service-level model (`UserAddressList`) using data access objects (`CrudRepository`s) from each core.
+
+# Problems
+
+There are 2 major problems when dealing with multiple data sources within the same Spring Boot application:
+
+* How to define multiple data sources in Java and in `application.properties`
+* How to setup tests and initialize data sources prior to running the tests
 
 # Demo
 
