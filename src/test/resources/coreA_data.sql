@@ -1,0 +1,1 @@
+INSERT INTO users (id, first_name, middle_name, last_name, email) VALUES (1, 'First', 'Middle', 'Last', 'first.middle.last@test.com');
